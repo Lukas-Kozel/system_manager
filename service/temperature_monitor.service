@@ -1,0 +1,15 @@
+[Unit]
+Description=CPU Temperature Monitor Service
+After=network.target
+
+[Service]
+ExecStart=/home/luky/Desktop/Projects/system_manager/system_manager/service/temp_reader.py
+Restart=always
+User=luky
+Environment=DISPLAY=:0
+Environment="XAUTHORITY=/home/luky/.Xauthority"
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

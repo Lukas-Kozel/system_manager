@@ -1,0 +1,7 @@
+sqlite3 temperatures.db
+
+.tables
+
+SELECT * FROM temperatures;
+
+.quit
