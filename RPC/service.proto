@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service TemperatureService {
+    rpc StreamTemperature (StreamRequest) returns (stream TemperatureData);
+}
+
+message StreamRequest {
+}
+
+message TemperatureData {
+    float temperature = 1;
+    string timestamp = 2;
+}
