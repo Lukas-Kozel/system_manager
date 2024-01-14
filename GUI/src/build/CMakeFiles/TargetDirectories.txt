@@ -1,0 +1,4 @@
+/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/gui.dir
+/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/edit_cache.dir
+/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/rebuild_cache.dir
+/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/gui_autogen.dir
