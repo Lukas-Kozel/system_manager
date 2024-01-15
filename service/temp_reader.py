@@ -4,6 +4,7 @@ import time
 import logging
 import sys
 import os
+from RPC.src.RPC_server_manager import RPCServerManager
 
 # code for solving issues with linking modules
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,11 +45,14 @@ def store_data():
     
     
 def main():
+    server = RPCServerManager()
+    server.start_server()
     while True:
         try:
             timestamp = time.time()
             temp = read_cpu_temperature()
             fill_buffer(timestamp,temp)
+            server.add_data(temperature=temp,timestamp=timestamp)
         except Exception as e:
             logger.error(str(e))
         time.sleep(1)
