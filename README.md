@@ -1,2 +1,2 @@
-# system manager
-This is repository for an app that is displaying real-time status of variety information about laptop. Currently it will be working with CPU and GPU temperatures. This app is created for educational purposes.
+# System Manager
+This repository is for an app that displays real-time information about various aspects of a laptop. Currently, it focuses on CPU and GPU temperatures. This app is created for educational purposes, so the technology used might be considered overkill for the simplicity of the app.
