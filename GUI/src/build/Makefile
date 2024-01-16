@@ -142,6 +142,78 @@ gui_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui_autogen.dir/build.make CMakeFiles/gui_autogen.dir/build
 .PHONY : gui_autogen/fast
 
+Client_bridge.o: Client_bridge.cpp.o
+.PHONY : Client_bridge.o
+
+# target to build an object file
+Client_bridge.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/Client_bridge.cpp.o
+.PHONY : Client_bridge.cpp.o
+
+Client_bridge.i: Client_bridge.cpp.i
+.PHONY : Client_bridge.i
+
+# target to preprocess a source file
+Client_bridge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/Client_bridge.cpp.i
+.PHONY : Client_bridge.cpp.i
+
+Client_bridge.s: Client_bridge.cpp.s
+.PHONY : Client_bridge.s
+
+# target to generate assembly for a file
+Client_bridge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/Client_bridge.cpp.s
+.PHONY : Client_bridge.cpp.s
+
+MainWindow.o: MainWindow.cpp.o
+.PHONY : MainWindow.o
+
+# target to build an object file
+MainWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/MainWindow.cpp.o
+.PHONY : MainWindow.cpp.o
+
+MainWindow.i: MainWindow.cpp.i
+.PHONY : MainWindow.i
+
+# target to preprocess a source file
+MainWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/MainWindow.cpp.i
+.PHONY : MainWindow.cpp.i
+
+MainWindow.s: MainWindow.cpp.s
+.PHONY : MainWindow.s
+
+# target to generate assembly for a file
+MainWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/MainWindow.cpp.s
+.PHONY : MainWindow.cpp.s
+
+RPC_client.o: RPC_client.cpp.o
+.PHONY : RPC_client.o
+
+# target to build an object file
+RPC_client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/RPC_client.cpp.o
+.PHONY : RPC_client.cpp.o
+
+RPC_client.i: RPC_client.cpp.i
+.PHONY : RPC_client.i
+
+# target to preprocess a source file
+RPC_client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/RPC_client.cpp.i
+.PHONY : RPC_client.cpp.i
+
+RPC_client.s: RPC_client.cpp.s
+.PHONY : RPC_client.s
+
+# target to generate assembly for a file
+RPC_client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/RPC_client.cpp.s
+.PHONY : RPC_client.cpp.s
+
 gui_autogen/mocs_compilation.o: gui_autogen/mocs_compilation.cpp.o
 .PHONY : gui_autogen/mocs_compilation.o
 
@@ -165,6 +237,54 @@ gui_autogen/mocs_compilation.s: gui_autogen/mocs_compilation.cpp.s
 gui_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/gui_autogen/mocs_compilation.cpp.s
 .PHONY : gui_autogen/mocs_compilation.cpp.s
+
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.o: home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.o
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.o
+
+# target to build an object file
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.o
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.o
+
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.i: home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.i
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.i
+
+# target to preprocess a source file
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.i
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.i
+
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.s: home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.s
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.s
+
+# target to generate assembly for a file
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.s
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.cc.s
+
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.o: home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.o
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.o
+
+# target to build an object file
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.o
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.o
+
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.i: home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.i
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.i
+
+# target to preprocess a source file
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.i
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.i
+
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.s: home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.s
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.s
+
+# target to generate assembly for a file
+home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.s
+.PHONY : home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.cc.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -200,9 +320,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... gui_autogen"
 	@echo "... gui"
+	@echo "... Client_bridge.o"
+	@echo "... Client_bridge.i"
+	@echo "... Client_bridge.s"
+	@echo "... MainWindow.o"
+	@echo "... MainWindow.i"
+	@echo "... MainWindow.s"
+	@echo "... RPC_client.o"
+	@echo "... RPC_client.i"
+	@echo "... RPC_client.s"
 	@echo "... gui_autogen/mocs_compilation.o"
 	@echo "... gui_autogen/mocs_compilation.i"
 	@echo "... gui_autogen/mocs_compilation.s"
+	@echo "... home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.o"
+	@echo "... home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.i"
+	@echo "... home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.grpc.pb.s"
+	@echo "... home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.o"
+	@echo "... home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.i"
+	@echo "... home/luky/Desktop/Projects/system_manager/system_manager/RPC/service.pb.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

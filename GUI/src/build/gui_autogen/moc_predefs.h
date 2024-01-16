@@ -109,6 +109,7 @@
 #define __STDC_IEC_559__ 1
 #define __STDC_ISO_10646__ 201706L
 #define __UINT16_C(c) c
+#define QT_CHARTS_LIB 1
 #define __DECIMAL_DIG__ 21
 #define __STDC_IEC_559_COMPLEX__ 1
 #define __FLT64_EPSILON__ 2.22044604925031308084726333618164062e-16F64
@@ -141,6 +142,7 @@
 #define __INTPTR_WIDTH__ 64
 #define __FLT64X_HAS_INFINITY__ 1
 #define __UINT_LEAST32_MAX__ 0xffffffffU
+#define CARES_STATICLIB 1
 #define __FLT32X_HAS_DENORM__ 1
 #define __INT_FAST16_TYPE__ long int
 #define __MMX_WITH_SSE__ 1

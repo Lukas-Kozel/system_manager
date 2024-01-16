@@ -535,3 +535,40 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/luky/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/luky/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/home/luky/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/luky/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/home/luky/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.26/Modules/FindProtobuf.cmake:444 (find_package)"
+      - "CMakeLists.txt:13 (find_package)"
+    directories:
+      source: "/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/CMakeScratch/TryCompile-DfNMUg"
+      binary: "/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/CMakeScratch/TryCompile-DfNMUg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: /home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/CMakeScratch/TryCompile-DfNMUg
+        
+        Run Build Command(s):/home/luky/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4853c/fast && gmake[1]: Entering directory '/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/CMakeScratch/TryCompile-DfNMUg'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4853c.dir/build.make CMakeFiles/cmTC_4853c.dir/build
+        gmake[2]: Entering directory '/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/CMakeScratch/TryCompile-DfNMUg'
+        Building C object CMakeFiles/cmTC_4853c.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4853c.dir/src.c.o -c /home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/CMakeScratch/TryCompile-DfNMUg/src.c
+        Linking C executable cmTC_4853c
+        /home/luky/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4853c.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_4853c.dir/src.c.o -o cmTC_4853c 
+        gmake[2]: Leaving directory '/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/CMakeScratch/TryCompile-DfNMUg'
+        gmake[1]: Leaving directory '/home/luky/Desktop/Projects/system_manager/system_manager/GUI/src/build/CMakeFiles/CMakeScratch/TryCompile-DfNMUg'
+        
+      exitCode: 0
+...
