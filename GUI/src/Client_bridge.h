@@ -16,4 +16,4 @@ class Client_bridge : public QObject{
 
     private:
         RPCclient* client_;
-}
+};

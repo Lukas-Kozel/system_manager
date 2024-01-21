@@ -15,7 +15,7 @@ class TemperatureServiceStub(object):
             channel: A grpc.Channel.
         """
         self.StreamTemperature = channel.unary_stream(
-                '/TemperatureService/StreamTemperature',
+                '/RPC.TemperatureService/StreamTemperature',
                 request_serializer=service__pb2.StreamRequest.SerializeToString,
                 response_deserializer=service__pb2.TemperatureData.FromString,
                 )
@@ -40,7 +40,7 @@ def add_TemperatureServiceServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'TemperatureService', rpc_method_handlers)
+            'RPC.TemperatureService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -59,7 +59,7 @@ class TemperatureService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/TemperatureService/StreamTemperature',
+        return grpc.experimental.unary_stream(request, target, '/RPC.TemperatureService/StreamTemperature',
             service__pb2.StreamRequest.SerializeToString,
             service__pb2.TemperatureData.FromString,
             options, channel_credentials,

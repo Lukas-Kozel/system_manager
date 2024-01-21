@@ -1,19 +1,19 @@
 #include "RPC_client.h"
 
 
-RPCclient::RPCclient(std::shared_ptr<grpc::Channel> channel): stub_(service::TemperatureService::NewStub(channel)){}
+RPCclient::RPCclient(std::shared_ptr<grpc::Channel> channel): stub_(RPC::TemperatureService::NewStub(channel)){}
 
 void RPCclient::setTemperatureDataCallback(TemperatureDataCallback callback) {
     temperatureDataCallback_ = callback;
 }
 
 
-void RPCclient::streamData(){
-        service::StreamRequest request;
+void RPCclient::StreamTemperature(){
+        RPC::StreamRequest request;
         grpc::ClientContext context;
 
-        auto reader = stub_->streamData(&context,request);
-        service::TemperatureData data;
+        auto reader = stub_->StreamTemperature(&context,request);
+        RPC::TemperatureData data;
 
         while(reader->Read(&data)){
             std::cout << "Received temperature: " << data.temperature()

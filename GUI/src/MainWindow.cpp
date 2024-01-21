@@ -1,14 +1,15 @@
 #include "MainWindow.h"
 
-MainWindow::MainWindow(RPCclient* client, Client_bridge* client_bridge, QWidget *parent) : QMainWindow(parent), Client_bridge(client_bridge), RPCclient(client){
+MainWindow::MainWindow(RPCclient* client, Client_bridge* client_bridge, QWidget *parent) 
+    : QMainWindow(parent), client_bridge(client_bridge), client(client) {
     connect(client_bridge, &Client_bridge::temperatureUpdated, this, &MainWindow::updateTemperatureLabel);
-    client->streamData();
+    client->StreamTemperature();
     QWidget* centralWidget = new QWidget(this);
     temperatureDataLabel = new QLabel(centralWidget);
-}
+    this->setCentralWidget(centralWidget);
+};
 
-MainWindow::updateTemperatureLabel(float temperature, const std::string& timestamp){
-    QString temp;
-    temp.sprintf("temperature: %.3f; timestamp: %s", temperature,timestamp);
-    dronePoseLabel->setText(temp);
+void MainWindow::updateTemperatureLabel(float temperature, const QString& timestamp) {
+    QString temp = QString("temperature: %1; timestamp: %2").arg(temperature, 0, 'f', 3).arg(timestamp);
+    temperatureDataLabel->setText(temp);
 }

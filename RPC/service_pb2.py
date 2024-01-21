@@ -14,17 +14,17 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rservice.proto\"\x0f\n\rStreamRequest\"9\n\x0fTemperatureData\x12\x13\n\x0btemperature\x18\x01 \x01(\x02\x12\x11\n\ttimestamp\x18\x02 \x01(\t2M\n\x12TemperatureService\x12\x37\n\x11StreamTemperature\x12\x0e.StreamRequest\x1a\x10.TemperatureData0\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rservice.proto\x12\x03RPC\"\x0f\n\rStreamRequest\"9\n\x0fTemperatureData\x12\x13\n\x0btemperature\x18\x01 \x01(\x02\x12\x11\n\ttimestamp\x18\x02 \x01(\t2U\n\x12TemperatureService\x12?\n\x11StreamTemperature\x12\x12.RPC.StreamRequest\x1a\x14.RPC.TemperatureData0\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _globals['_STREAMREQUEST']._serialized_start=17
-  _globals['_STREAMREQUEST']._serialized_end=32
-  _globals['_TEMPERATUREDATA']._serialized_start=34
-  _globals['_TEMPERATUREDATA']._serialized_end=91
-  _globals['_TEMPERATURESERVICE']._serialized_start=93
-  _globals['_TEMPERATURESERVICE']._serialized_end=170
+  _globals['_STREAMREQUEST']._serialized_start=22
+  _globals['_STREAMREQUEST']._serialized_end=37
+  _globals['_TEMPERATUREDATA']._serialized_start=39
+  _globals['_TEMPERATUREDATA']._serialized_end=96
+  _globals['_TEMPERATURESERVICE']._serialized_start=98
+  _globals['_TEMPERATURESERVICE']._serialized_end=183
 # @@protoc_insertion_point(module_scope)

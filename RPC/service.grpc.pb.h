@@ -25,52 +25,54 @@
 #include <grpcpp/support/stub_options.h>
 #include <grpcpp/support/sync_stream.h>
 
+namespace RPC {
+
 class TemperatureService final {
  public:
   static constexpr char const* service_full_name() {
-    return "TemperatureService";
+    return "RPC.TemperatureService";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::TemperatureData>> StreamTemperature(::grpc::ClientContext* context, const ::StreamRequest& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::TemperatureData>>(StreamTemperatureRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::RPC::TemperatureData>> StreamTemperature(::grpc::ClientContext* context, const ::RPC::StreamRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::RPC::TemperatureData>>(StreamTemperatureRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::TemperatureData>> AsyncStreamTemperature(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::TemperatureData>>(AsyncStreamTemperatureRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::RPC::TemperatureData>> AsyncStreamTemperature(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::RPC::TemperatureData>>(AsyncStreamTemperatureRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::TemperatureData>> PrepareAsyncStreamTemperature(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::TemperatureData>>(PrepareAsyncStreamTemperatureRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::RPC::TemperatureData>> PrepareAsyncStreamTemperature(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::RPC::TemperatureData>>(PrepareAsyncStreamTemperatureRaw(context, request, cq));
     }
     class async_interface {
      public:
       virtual ~async_interface() {}
-      virtual void StreamTemperature(::grpc::ClientContext* context, const ::StreamRequest* request, ::grpc::ClientReadReactor< ::TemperatureData>* reactor) = 0;
+      virtual void StreamTemperature(::grpc::ClientContext* context, const ::RPC::StreamRequest* request, ::grpc::ClientReadReactor< ::RPC::TemperatureData>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientReaderInterface< ::TemperatureData>* StreamTemperatureRaw(::grpc::ClientContext* context, const ::StreamRequest& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::TemperatureData>* AsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::TemperatureData>* PrepareAsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::RPC::TemperatureData>* StreamTemperatureRaw(::grpc::ClientContext* context, const ::RPC::StreamRequest& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::RPC::TemperatureData>* AsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::RPC::TemperatureData>* PrepareAsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    std::unique_ptr< ::grpc::ClientReader< ::TemperatureData>> StreamTemperature(::grpc::ClientContext* context, const ::StreamRequest& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::TemperatureData>>(StreamTemperatureRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReader< ::RPC::TemperatureData>> StreamTemperature(::grpc::ClientContext* context, const ::RPC::StreamRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::RPC::TemperatureData>>(StreamTemperatureRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::TemperatureData>> AsyncStreamTemperature(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::TemperatureData>>(AsyncStreamTemperatureRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::RPC::TemperatureData>> AsyncStreamTemperature(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::RPC::TemperatureData>>(AsyncStreamTemperatureRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::TemperatureData>> PrepareAsyncStreamTemperature(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::TemperatureData>>(PrepareAsyncStreamTemperatureRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::RPC::TemperatureData>> PrepareAsyncStreamTemperature(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::RPC::TemperatureData>>(PrepareAsyncStreamTemperatureRaw(context, request, cq));
     }
     class async final :
       public StubInterface::async_interface {
      public:
-      void StreamTemperature(::grpc::ClientContext* context, const ::StreamRequest* request, ::grpc::ClientReadReactor< ::TemperatureData>* reactor) override;
+      void StreamTemperature(::grpc::ClientContext* context, const ::RPC::StreamRequest* request, ::grpc::ClientReadReactor< ::RPC::TemperatureData>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -82,9 +84,9 @@ class TemperatureService final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientReader< ::TemperatureData>* StreamTemperatureRaw(::grpc::ClientContext* context, const ::StreamRequest& request) override;
-    ::grpc::ClientAsyncReader< ::TemperatureData>* AsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::TemperatureData>* PrepareAsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::RPC::TemperatureData>* StreamTemperatureRaw(::grpc::ClientContext* context, const ::RPC::StreamRequest& request) override;
+    ::grpc::ClientAsyncReader< ::RPC::TemperatureData>* AsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::RPC::TemperatureData>* PrepareAsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_StreamTemperature_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -93,7 +95,7 @@ class TemperatureService final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status StreamTemperature(::grpc::ServerContext* context, const ::StreamRequest* request, ::grpc::ServerWriter< ::TemperatureData>* writer);
+    virtual ::grpc::Status StreamTemperature(::grpc::ServerContext* context, const ::RPC::StreamRequest* request, ::grpc::ServerWriter< ::RPC::TemperatureData>* writer);
   };
   template <class BaseClass>
   class WithAsyncMethod_StreamTemperature : public BaseClass {
@@ -107,11 +109,11 @@ class TemperatureService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::StreamRequest* /*request*/, ::grpc::ServerWriter< ::TemperatureData>* /*writer*/) override {
+    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::RPC::StreamRequest* /*request*/, ::grpc::ServerWriter< ::RPC::TemperatureData>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestStreamTemperature(::grpc::ServerContext* context, ::StreamRequest* request, ::grpc::ServerAsyncWriter< ::TemperatureData>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestStreamTemperature(::grpc::ServerContext* context, ::RPC::StreamRequest* request, ::grpc::ServerAsyncWriter< ::RPC::TemperatureData>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
@@ -123,20 +125,20 @@ class TemperatureService final {
    public:
     WithCallbackMethod_StreamTemperature() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::StreamRequest, ::TemperatureData>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::RPC::StreamRequest, ::RPC::TemperatureData>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::StreamRequest* request) { return this->StreamTemperature(context, request); }));
+                   ::grpc::CallbackServerContext* context, const ::RPC::StreamRequest* request) { return this->StreamTemperature(context, request); }));
     }
     ~WithCallbackMethod_StreamTemperature() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::StreamRequest* /*request*/, ::grpc::ServerWriter< ::TemperatureData>* /*writer*/) override {
+    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::RPC::StreamRequest* /*request*/, ::grpc::ServerWriter< ::RPC::TemperatureData>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerWriteReactor< ::TemperatureData>* StreamTemperature(
-      ::grpc::CallbackServerContext* /*context*/, const ::StreamRequest* /*request*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::RPC::TemperatureData>* StreamTemperature(
+      ::grpc::CallbackServerContext* /*context*/, const ::RPC::StreamRequest* /*request*/)  { return nullptr; }
   };
   typedef WithCallbackMethod_StreamTemperature<Service > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
@@ -152,7 +154,7 @@ class TemperatureService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::StreamRequest* /*request*/, ::grpc::ServerWriter< ::TemperatureData>* /*writer*/) override {
+    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::RPC::StreamRequest* /*request*/, ::grpc::ServerWriter< ::RPC::TemperatureData>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -169,7 +171,7 @@ class TemperatureService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::StreamRequest* /*request*/, ::grpc::ServerWriter< ::TemperatureData>* /*writer*/) override {
+    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::RPC::StreamRequest* /*request*/, ::grpc::ServerWriter< ::RPC::TemperatureData>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -192,7 +194,7 @@ class TemperatureService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::StreamRequest* /*request*/, ::grpc::ServerWriter< ::TemperatureData>* /*writer*/) override {
+    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::RPC::StreamRequest* /*request*/, ::grpc::ServerWriter< ::RPC::TemperatureData>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -208,10 +210,10 @@ class TemperatureService final {
     WithSplitStreamingMethod_StreamTemperature() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::StreamRequest, ::TemperatureData>(
+          ::RPC::StreamRequest, ::RPC::TemperatureData>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerSplitStreamer<
-                     ::StreamRequest, ::TemperatureData>* streamer) {
+                     ::RPC::StreamRequest, ::RPC::TemperatureData>* streamer) {
                        return this->StreamedStreamTemperature(context,
                          streamer);
                   }));
@@ -220,16 +222,18 @@ class TemperatureService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::StreamRequest* /*request*/, ::grpc::ServerWriter< ::TemperatureData>* /*writer*/) override {
+    ::grpc::Status StreamTemperature(::grpc::ServerContext* /*context*/, const ::RPC::StreamRequest* /*request*/, ::grpc::ServerWriter< ::RPC::TemperatureData>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedStreamTemperature(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::StreamRequest,::TemperatureData>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedStreamTemperature(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::RPC::StreamRequest,::RPC::TemperatureData>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_StreamTemperature<Service > SplitStreamedService;
   typedef WithSplitStreamingMethod_StreamTemperature<Service > StreamedService;
 };
+
+}  // namespace RPC
 
 
 #endif  // GRPC_service_2eproto__INCLUDED

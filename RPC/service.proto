@@ -1,4 +1,5 @@
 syntax = "proto3";
+package RPC;
 
 service TemperatureService {
     rpc StreamTemperature (StreamRequest) returns (stream TemperatureData);

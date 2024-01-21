@@ -56,17 +56,20 @@ struct TableStruct_service_2eproto {
 };
 extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_service_2eproto;
+namespace RPC {
 class StreamRequest;
 struct StreamRequestDefaultTypeInternal;
 extern StreamRequestDefaultTypeInternal _StreamRequest_default_instance_;
 class TemperatureData;
 struct TemperatureDataDefaultTypeInternal;
 extern TemperatureDataDefaultTypeInternal _TemperatureData_default_instance_;
+}  // namespace RPC
 namespace google {
 namespace protobuf {
 }  // namespace protobuf
 }  // namespace google
 
+namespace RPC {
 
 // ===================================================================
 
@@ -74,7 +77,7 @@ namespace protobuf {
 // -------------------------------------------------------------------
 
 class TemperatureData final :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:TemperatureData) */ {
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:RPC.TemperatureData) */ {
  public:
   inline TemperatureData() : TemperatureData(nullptr) {}
   ~TemperatureData() override;
@@ -188,7 +191,7 @@ class TemperatureData final :
   private:
   friend class ::google::protobuf::internal::AnyMetadata;
   static ::absl::string_view FullMessageName() {
-    return "TemperatureData";
+    return "RPC.TemperatureData";
   }
   protected:
   explicit TemperatureData(::google::protobuf::Arena* arena);
@@ -234,14 +237,14 @@ class TemperatureData final :
   void _internal_set_temperature(float value);
 
   public:
-  // @@protoc_insertion_point(class_scope:TemperatureData)
+  // @@protoc_insertion_point(class_scope:RPC.TemperatureData)
  private:
   class _Internal;
 
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       1, 2, 0,
-      33, 2>
+      37, 2>
       _table_;
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -267,7 +270,7 @@ class TemperatureData final :
 };// -------------------------------------------------------------------
 
 class StreamRequest final :
-    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:StreamRequest) */ {
+    public ::google::protobuf::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:RPC.StreamRequest) */ {
  public:
   inline StreamRequest() : StreamRequest(nullptr) {}
   template<typename = void>
@@ -366,7 +369,7 @@ class StreamRequest final :
   private:
   friend class ::google::protobuf::internal::AnyMetadata;
   static ::absl::string_view FullMessageName() {
-    return "StreamRequest";
+    return "RPC.StreamRequest";
   }
   protected:
   explicit StreamRequest(::google::protobuf::Arena* arena);
@@ -379,7 +382,7 @@ class StreamRequest final :
 
   // accessors -------------------------------------------------------
 
-  // @@protoc_insertion_point(class_scope:StreamRequest)
+  // @@protoc_insertion_point(class_scope:RPC.StreamRequest)
  private:
   class _Internal;
 
@@ -428,12 +431,12 @@ inline void TemperatureData::clear_temperature() {
   _impl_.temperature_ = 0;
 }
 inline float TemperatureData::temperature() const {
-  // @@protoc_insertion_point(field_get:TemperatureData.temperature)
+  // @@protoc_insertion_point(field_get:RPC.TemperatureData.temperature)
   return _internal_temperature();
 }
 inline void TemperatureData::set_temperature(float value) {
   _internal_set_temperature(value);
-  // @@protoc_insertion_point(field_set:TemperatureData.temperature)
+  // @@protoc_insertion_point(field_set:RPC.TemperatureData.temperature)
 }
 inline float TemperatureData::_internal_temperature() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
@@ -452,7 +455,7 @@ inline void TemperatureData::clear_timestamp() {
 }
 inline const std::string& TemperatureData::timestamp() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:TemperatureData.timestamp)
+  // @@protoc_insertion_point(field_get:RPC.TemperatureData.timestamp)
   return _internal_timestamp();
 }
 template <typename Arg_, typename... Args_>
@@ -461,11 +464,11 @@ inline PROTOBUF_ALWAYS_INLINE void TemperatureData::set_timestamp(Arg_&& arg,
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.timestamp_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:TemperatureData.timestamp)
+  // @@protoc_insertion_point(field_set:RPC.TemperatureData.timestamp)
 }
 inline std::string* TemperatureData::mutable_timestamp() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_timestamp();
-  // @@protoc_insertion_point(field_mutable:TemperatureData.timestamp)
+  // @@protoc_insertion_point(field_mutable:RPC.TemperatureData.timestamp)
   return _s;
 }
 inline const std::string& TemperatureData::_internal_timestamp() const {
@@ -484,7 +487,7 @@ inline std::string* TemperatureData::_internal_mutable_timestamp() {
 }
 inline std::string* TemperatureData::release_timestamp() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  // @@protoc_insertion_point(field_release:TemperatureData.timestamp)
+  // @@protoc_insertion_point(field_release:RPC.TemperatureData.timestamp)
   return _impl_.timestamp_.Release();
 }
 inline void TemperatureData::set_allocated_timestamp(std::string* value) {
@@ -495,7 +498,7 @@ inline void TemperatureData::set_allocated_timestamp(std::string* value) {
           _impl_.timestamp_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:TemperatureData.timestamp)
+  // @@protoc_insertion_point(field_set_allocated:RPC.TemperatureData.timestamp)
 }
 
 #ifdef __GNUC__
@@ -503,6 +506,7 @@ inline void TemperatureData::set_allocated_timestamp(std::string* value) {
 #endif  // __GNUC__
 
 // @@protoc_insertion_point(namespace_scope)
+}  // namespace RPC
 
 
 // @@protoc_insertion_point(global_scope)

@@ -15,8 +15,9 @@ public:
 
 private:
     Client_bridge* client_bridge;
+    RPCclient* client;
 
 private slots:
-    void updateTemperatureLabel(float temperature, const std::string& timestamp);
+    void updateTemperatureLabel(float temperature, const QString& timestamp);
 
-}
+};

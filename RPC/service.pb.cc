@@ -20,6 +20,7 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
+namespace RPC {
 
 inline constexpr TemperatureData::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -54,6 +55,7 @@ struct StreamRequestDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StreamRequestDefaultTypeInternal _StreamRequest_default_instance_;
+}  // namespace RPC
 static ::_pb::Metadata file_level_metadata_service_2eproto[2];
 static constexpr const ::_pb::EnumDescriptor**
     file_level_enum_descriptors_service_2eproto = nullptr;
@@ -62,7 +64,7 @@ static constexpr const ::_pb::ServiceDescriptor**
 const ::uint32_t TableStruct_service_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
     protodesc_cold) = {
     ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::StreamRequest, _internal_metadata_),
+    PROTOBUF_FIELD_OFFSET(::RPC::StreamRequest, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
     ~0u,  // no _weak_field_map_
@@ -70,39 +72,39 @@ const ::uint32_t TableStruct_service_2eproto::offsets[] PROTOBUF_SECTION_VARIABL
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
     ~0u,  // no _has_bits_
-    PROTOBUF_FIELD_OFFSET(::TemperatureData, _internal_metadata_),
+    PROTOBUF_FIELD_OFFSET(::RPC::TemperatureData, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
     ~0u,  // no _weak_field_map_
     ~0u,  // no _inlined_string_donated_
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
-    PROTOBUF_FIELD_OFFSET(::TemperatureData, _impl_.temperature_),
-    PROTOBUF_FIELD_OFFSET(::TemperatureData, _impl_.timestamp_),
+    PROTOBUF_FIELD_OFFSET(::RPC::TemperatureData, _impl_.temperature_),
+    PROTOBUF_FIELD_OFFSET(::RPC::TemperatureData, _impl_.timestamp_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::StreamRequest)},
-        {8, -1, -1, sizeof(::TemperatureData)},
+        {0, -1, -1, sizeof(::RPC::StreamRequest)},
+        {8, -1, -1, sizeof(::RPC::TemperatureData)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-    &::_StreamRequest_default_instance_._instance,
-    &::_TemperatureData_default_instance_._instance,
+    &::RPC::_StreamRequest_default_instance_._instance,
+    &::RPC::_TemperatureData_default_instance_._instance,
 };
 const char descriptor_table_protodef_service_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-    "\n\rservice.proto\"\017\n\rStreamRequest\"9\n\017Temp"
-    "eratureData\022\023\n\013temperature\030\001 \001(\002\022\021\n\ttime"
-    "stamp\030\002 \001(\t2M\n\022TemperatureService\0227\n\021Str"
-    "eamTemperature\022\016.StreamRequest\032\020.Tempera"
-    "tureData0\001b\006proto3"
+    "\n\rservice.proto\022\003RPC\"\017\n\rStreamRequest\"9\n"
+    "\017TemperatureData\022\023\n\013temperature\030\001 \001(\002\022\021\n"
+    "\ttimestamp\030\002 \001(\t2U\n\022TemperatureService\022\?"
+    "\n\021StreamTemperature\022\022.RPC.StreamRequest\032"
+    "\024.RPC.TemperatureData0\001b\006proto3"
 };
 static ::absl::once_flag descriptor_table_service_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_service_2eproto = {
     false,
     false,
-    178,
+    191,
     descriptor_table_protodef_service_2eproto,
     "service.proto",
     &descriptor_table_service_2eproto_once,
@@ -134,6 +136,7 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_service_
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_service_2eproto(&descriptor_table_service_2eproto);
+namespace RPC {
 // ===================================================================
 
 class StreamRequest::_Internal {
@@ -142,7 +145,7 @@ class StreamRequest::_Internal {
 
 StreamRequest::StreamRequest(::google::protobuf::Arena* arena)
     : ::google::protobuf::internal::ZeroFieldsBase(arena) {
-  // @@protoc_insertion_point(arena_constructor:StreamRequest)
+  // @@protoc_insertion_point(arena_constructor:RPC.StreamRequest)
 }
 StreamRequest::StreamRequest(
     ::google::protobuf::Arena* arena,
@@ -153,7 +156,7 @@ StreamRequest::StreamRequest(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
 
-  // @@protoc_insertion_point(copy_constructor:StreamRequest)
+  // @@protoc_insertion_point(copy_constructor:RPC.StreamRequest)
 }
 
 
@@ -178,7 +181,7 @@ class TemperatureData::_Internal {
 TemperatureData::TemperatureData(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:TemperatureData)
+  // @@protoc_insertion_point(arena_constructor:RPC.TemperatureData)
 }
 inline PROTOBUF_NDEBUG_INLINE TemperatureData::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
@@ -197,7 +200,7 @@ TemperatureData::TemperatureData(
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
   _impl_.temperature_ = from._impl_.temperature_;
 
-  // @@protoc_insertion_point(copy_constructor:TemperatureData)
+  // @@protoc_insertion_point(copy_constructor:RPC.TemperatureData)
 }
 inline PROTOBUF_NDEBUG_INLINE TemperatureData::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
@@ -210,7 +213,7 @@ inline void TemperatureData::SharedCtor(::_pb::Arena* arena) {
   _impl_.temperature_ = {};
 }
 TemperatureData::~TemperatureData() {
-  // @@protoc_insertion_point(destructor:TemperatureData)
+  // @@protoc_insertion_point(destructor:RPC.TemperatureData)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
@@ -221,7 +224,7 @@ inline void TemperatureData::SharedDtor() {
 }
 
 PROTOBUF_NOINLINE void TemperatureData::Clear() {
-// @@protoc_insertion_point(message_clear_start:TemperatureData)
+// @@protoc_insertion_point(message_clear_start:RPC.TemperatureData)
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -240,7 +243,7 @@ const char* TemperatureData::_InternalParse(
 
 
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 33, 2> TemperatureData::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 37, 2> TemperatureData::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -272,8 +275,8 @@ const ::_pbi::TcParseTable<1, 2, 0, 33, 2> TemperatureData::_table_ = {
   }},
   // no aux_entries
   {{
-    "\17\0\11\0\0\0\0\0"
-    "TemperatureData"
+    "\23\0\11\0\0\0\0\0"
+    "RPC.TemperatureData"
     "timestamp"
   }},
 };
@@ -281,7 +284,7 @@ const ::_pbi::TcParseTable<1, 2, 0, 33, 2> TemperatureData::_table_ = {
 ::uint8_t* TemperatureData::_InternalSerialize(
     ::uint8_t* target,
     ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:TemperatureData)
+  // @@protoc_insertion_point(serialize_to_array_start:RPC.TemperatureData)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -301,7 +304,7 @@ const ::_pbi::TcParseTable<1, 2, 0, 33, 2> TemperatureData::_table_ = {
   if (!this->_internal_timestamp().empty()) {
     const std::string& _s = this->_internal_timestamp();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "TemperatureData.timestamp");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "RPC.TemperatureData.timestamp");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -310,12 +313,12 @@ const ::_pbi::TcParseTable<1, 2, 0, 33, 2> TemperatureData::_table_ = {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:TemperatureData)
+  // @@protoc_insertion_point(serialize_to_array_end:RPC.TemperatureData)
   return target;
 }
 
 ::size_t TemperatureData::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:TemperatureData)
+// @@protoc_insertion_point(message_byte_size_start:RPC.TemperatureData)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -352,7 +355,7 @@ const ::google::protobuf::Message::ClassData* TemperatureData::GetClassData() co
 void TemperatureData::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<TemperatureData*>(&to_msg);
   auto& from = static_cast<const TemperatureData&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:TemperatureData)
+  // @@protoc_insertion_point(class_specific_merge_from_start:RPC.TemperatureData)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -372,7 +375,7 @@ void TemperatureData::MergeImpl(::google::protobuf::Message& to_msg, const ::goo
 }
 
 void TemperatureData::CopyFrom(const TemperatureData& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:TemperatureData)
+// @@protoc_insertion_point(class_specific_copy_from_start:RPC.TemperatureData)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -400,6 +403,7 @@ void TemperatureData::InternalSwap(TemperatureData* PROTOBUF_RESTRICT other) {
       file_level_metadata_service_2eproto[1]);
 }
 // @@protoc_insertion_point(namespace_scope)
+}  // namespace RPC
 namespace google {
 namespace protobuf {
 }  // namespace protobuf

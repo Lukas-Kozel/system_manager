@@ -19,9 +19,10 @@
 #include <grpcpp/server_context.h>
 #include <grpcpp/impl/service_type.h>
 #include <grpcpp/support/sync_stream.h>
+namespace RPC {
 
 static const char* TemperatureService_method_names[] = {
-  "/TemperatureService/StreamTemperature",
+  "/RPC.TemperatureService/StreamTemperature",
 };
 
 std::unique_ptr< TemperatureService::Stub> TemperatureService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -34,31 +35,31 @@ TemperatureService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>&
   : channel_(channel), rpcmethod_StreamTemperature_(TemperatureService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   {}
 
-::grpc::ClientReader< ::TemperatureData>* TemperatureService::Stub::StreamTemperatureRaw(::grpc::ClientContext* context, const ::StreamRequest& request) {
-  return ::grpc::internal::ClientReaderFactory< ::TemperatureData>::Create(channel_.get(), rpcmethod_StreamTemperature_, context, request);
+::grpc::ClientReader< ::RPC::TemperatureData>* TemperatureService::Stub::StreamTemperatureRaw(::grpc::ClientContext* context, const ::RPC::StreamRequest& request) {
+  return ::grpc::internal::ClientReaderFactory< ::RPC::TemperatureData>::Create(channel_.get(), rpcmethod_StreamTemperature_, context, request);
 }
 
-void TemperatureService::Stub::async::StreamTemperature(::grpc::ClientContext* context, const ::StreamRequest* request, ::grpc::ClientReadReactor< ::TemperatureData>* reactor) {
-  ::grpc::internal::ClientCallbackReaderFactory< ::TemperatureData>::Create(stub_->channel_.get(), stub_->rpcmethod_StreamTemperature_, context, request, reactor);
+void TemperatureService::Stub::async::StreamTemperature(::grpc::ClientContext* context, const ::RPC::StreamRequest* request, ::grpc::ClientReadReactor< ::RPC::TemperatureData>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::RPC::TemperatureData>::Create(stub_->channel_.get(), stub_->rpcmethod_StreamTemperature_, context, request, reactor);
 }
 
-::grpc::ClientAsyncReader< ::TemperatureData>* TemperatureService::Stub::AsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::TemperatureData>::Create(channel_.get(), cq, rpcmethod_StreamTemperature_, context, request, true, tag);
+::grpc::ClientAsyncReader< ::RPC::TemperatureData>* TemperatureService::Stub::AsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::RPC::TemperatureData>::Create(channel_.get(), cq, rpcmethod_StreamTemperature_, context, request, true, tag);
 }
 
-::grpc::ClientAsyncReader< ::TemperatureData>* TemperatureService::Stub::PrepareAsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::StreamRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::TemperatureData>::Create(channel_.get(), cq, rpcmethod_StreamTemperature_, context, request, false, nullptr);
+::grpc::ClientAsyncReader< ::RPC::TemperatureData>* TemperatureService::Stub::PrepareAsyncStreamTemperatureRaw(::grpc::ClientContext* context, const ::RPC::StreamRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::RPC::TemperatureData>::Create(channel_.get(), cq, rpcmethod_StreamTemperature_, context, request, false, nullptr);
 }
 
 TemperatureService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       TemperatureService_method_names[0],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
-      new ::grpc::internal::ServerStreamingHandler< TemperatureService::Service, ::StreamRequest, ::TemperatureData>(
+      new ::grpc::internal::ServerStreamingHandler< TemperatureService::Service, ::RPC::StreamRequest, ::RPC::TemperatureData>(
           [](TemperatureService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::StreamRequest* req,
-             ::grpc::ServerWriter<::TemperatureData>* writer) {
+             const ::RPC::StreamRequest* req,
+             ::grpc::ServerWriter<::RPC::TemperatureData>* writer) {
                return service->StreamTemperature(ctx, req, writer);
              }, this)));
 }
@@ -66,11 +67,13 @@ TemperatureService::Service::Service() {
 TemperatureService::Service::~Service() {
 }
 
-::grpc::Status TemperatureService::Service::StreamTemperature(::grpc::ServerContext* context, const ::StreamRequest* request, ::grpc::ServerWriter< ::TemperatureData>* writer) {
+::grpc::Status TemperatureService::Service::StreamTemperature(::grpc::ServerContext* context, const ::RPC::StreamRequest* request, ::grpc::ServerWriter< ::RPC::TemperatureData>* writer) {
   (void) context;
   (void) request;
   (void) writer;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
+
+}  // namespace RPC
 
